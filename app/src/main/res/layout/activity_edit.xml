@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_f7f7f7"
+    tools:context=".ui.activity.EditActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/edit_iv_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back_android"/>
+
+        <ImageView
+            android:id="@+id/edit_iv_undo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pre_undo"
+            android:layout_toStartOf="@id/edit_iv_redo"
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageView
+            android:id="@+id/edit_iv_redo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pre_redo"
+            android:layout_toStartOf="@id/edit_iv_save"
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageView
+            android:id="@+id/edit_iv_more"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/more"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:id="@+id/edit_iv_save"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_baseline_done_24"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/edit_et_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="标题"
+            android:textColorHint="@color/color_B0B2BF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:background="@null"/>
+
+        <EditText
+            android:id="@+id/edit_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/edit_et_title"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:hint="开始书写"
+            android:textColorHint="@color/color_B0B2BF"
+            android:gravity="left|top"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</LinearLayout>

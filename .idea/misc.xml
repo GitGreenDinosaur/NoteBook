@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v21/linearlayout_water_selector.xml" value="0.232" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v21/ripple_with_color_mask.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1825" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/bg_toast.xml" value="0.2535" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ic_baseline_arrow_back_000.xml" value="0.232" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/item_layout_main_rv.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_border.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_content_border_bg.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/linearlayout_water_selector.xml" value="0.232" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ripple_with_color_mask.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ripple_with_shape_mask.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_edit.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_pre_private.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/item_layout_main_rv.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/recycle_item_slide_menu.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/view_toast_custom.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/menu/item_edit.xml" value="0.27395833333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

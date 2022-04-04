@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_f7f7f7">#F7F7F7</color>
+    <color name="color_B0B2BF">#B0B2BF</color>
+    <color name="color_95969A">#95969A</color>
+    <color name="color_sky_blue">#03A9F4</color>
+    <!--波纹效果相关颜色-->
+    <color name="text_Grey">#c1c1c2</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorAccent">#F8635d</color>
+
+</resources>

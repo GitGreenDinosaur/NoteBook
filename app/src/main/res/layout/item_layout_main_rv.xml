@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:id="@+id/item_main_ll_global"
+    android:background="@drawable/layout_content_border_bg">
+
+    <RelativeLayout
+        android:id="@+id/item_main_ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/ripple_with_shape_mask">
+
+        <TextView
+            android:id="@+id/item_main_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is a title"
+            android:padding="5dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/item_main_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_main_tv_title"
+            android:text="This is a content"
+            android:textAllCaps="false"
+            android:maxLines="1"
+            android:textColor="@color/color_B0B2BF"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/item_main_tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_main_tv_content"
+            android:text="It is time"
+            android:textAllCaps="false"
+            android:textColor="@color/color_95969A"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/item_main_iv_choose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/item_icon_choose_circle"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_main_tv_top"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="#ffa042"
+            android:gravity="center"
+            android:text="置顶"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/item_main_tv_delete"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
