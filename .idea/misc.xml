@@ -5,20 +5,46 @@
       <map>
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v21/linearlayout_water_selector.xml" value="0.232" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v21/ripple_with_color_mask.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v24/colorful_bg.xml" value="0.2765" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1825" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/bg_toast.xml" value="0.2535" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/dialog_more_bg.xml" value="0.2155" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ic_baseline_arrow_back_000.xml" value="0.232" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ic_baseline_clear_24.xml" value="0.204" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ic_btn_add.xml" value="0.2405" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/item_layout_main_rv.xml" value="0.2215" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_border.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_cancel_btn_bg.xml" value="0.2405" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_content_border_bg.xml" value="0.2215" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_pre_private_number_btn_bg.xml" value="0.235" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_waster_header.xml" value="0.2465" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/layout_waster_header_bg.xml" value="0.2405" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/linearlayout_water_selector.xml" value="0.232" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ripple_with_color_mask.xml" value="0.2215" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/ripple_with_shape_mask.xml" value="0.2215" />
-        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_edit.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/switch_thumb.xml" value="0.225" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/switch_track.xml" value="0.225" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/drawable/white_bg_r20dp_s2dp.xml" value="0.225" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_edit.xml" value="0.2" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_pre_private.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_private.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_setting.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/activity_waster.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_cancel.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_confirm.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_delete.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_more.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_private.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_private_cannel.xml" value="0.264" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_recover.xml" value="0.2" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_remove.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/dialog_setting_private.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/include_switch.xml" value="0.27395833333333336" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/layout/item_layout_main_rv.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/item_layout_private_rv.xml" value="0.27395833333333336" />
+        <entry key="..\:/Android/NoteBook/app/src/main/res/layout/item_layout_waster_rv.xml" value="0.27395833333333336" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/layout/recycle_item_slide_menu.xml" value="0.27395833333333336" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/layout/view_toast_custom.xml" value="0.27395833333333336" />
         <entry key="..\:/Android/NoteBook/app/src/main/res/menu/item_edit.xml" value="0.27395833333333336" />

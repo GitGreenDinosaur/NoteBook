@@ -8,7 +8,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowInsetsController;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -16,22 +18,34 @@ import android.view.animation.ScaleAnimation;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.xinhai.notebook.R;
-import com.xinhai.notebook.adapter.MySlideAdapter;
+import com.xinhai.notebook.adapter.MyMainSlideAdapter;
+import com.xinhai.notebook.adapter.OnStartDragListener;
+import com.xinhai.notebook.data.Constant;
+import com.xinhai.notebook.data.SelectEvent;
+import com.xinhai.notebook.data.db.DBManager;
 import com.xinhai.notebook.data.db.bean.Note;
 import com.xinhai.notebook.databinding.ActivityMainBinding;
+import com.xinhai.notebook.ui.dialog.MoreDialog;
+import com.xinhai.notebook.ui.widget.SimpleItemTouchHelperCallback;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+import de.greenrobot.event.EventBus;
 
-    private String TAG = "MainActivity";
+public class MainActivity extends AppCompatActivity implements OnStartDragListener {
+
+    private static final String TAG = "MainActivity";
     private ActivityMainBinding binding;
     private List<Note> mData;
+    private MyMainSlideAdapter mAdapter;
+    private EventBus event;
+    private ItemTouchHelper mItemTouchHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +61,81 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         mData = new ArrayList<>();
-
-
+        event = EventBus.getDefault();
+        event.register(this);
+        loadData();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadData();
+    }
+
+    /**
+     * 实现EvenBus
+     * @param event event
+     */
+    public void onEventMainThread(SelectEvent event) {
+        int size = event.getSize();
+//        if (size < list.size()) {
+//            isChange = true;
+//            checkbox.setChecked(false);
+//        } else {
+//            checkbox.setChecked(true);
+//            isChange = false;
+//        }
+//        selected.setText(String.format("已选%d项", size));
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private void loadData() {
+        //刷新数据
+        List<Note> topList = DBManager.getNoteListFromTab(Constant.TABLE_NAME_TOP);
+        List<Note> beanList = DBManager.getNoteListFromTab(Constant.TABLE_NAME_NOTE);
+        if (beanList.isEmpty() && topList.isEmpty()) return;
+        for (int i = 0; i < beanList.size(); i++) {
+            if (beanList.get(i).getStatus() == 1)
+                beanList.remove(beanList.get(i));
+        }
+        mData.clear();
+        mData.addAll(topList);
+        mData.addAll(beanList);
+        if (binding.mainRlDataTips.getVisibility() == View.VISIBLE){
+            initObject();
+        }
+        mAdapter.notifyDataSetChanged();
+    }
+
+    private void initObject(){
+        //有数据  则显示数据
+        binding.mainRvSlide.setVisibility(View.VISIBLE);
+        binding.mainRlDataTips.setVisibility(View.GONE);
+        //加载RecycleView
+        mAdapter = new MyMainSlideAdapter(mData, this,event);
+        binding.mainRvSlide.setHasFixedSize(true);
+        binding.mainRvSlide.setAdapter(mAdapter);
+        binding.mainRvSlide.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mAdapter);
+        mItemTouchHelper = new ItemTouchHelper(callback);
+//        mItemTouchHelper.attachToRecyclerView(recyclerView);
+
+        binding.mainRvSlide.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+                super.getItemOffsets(outRect, view, parent, state);
+                outRect.top = 2;
+                outRect.bottom = 2;
+            }
+        });
+        mItemTouchHelper.attachToRecyclerView(binding.mainRvSlide);
+    }
+
 
     @SuppressLint("ClickableViewAccessibility")
     private void initView() {
-        //加载Toolbar
-        setSupportActionBar(binding.mainToolbar);
+
         //将状态栏字体设置为黑色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             WindowInsetsController insetsController = getWindow().getInsetsController();
@@ -68,20 +149,8 @@ public class MainActivity extends AppCompatActivity {
             binding.mainRvSlide.setVisibility(View.GONE);
             binding.mainRlDataTips.setVisibility(View.VISIBLE);
         } else {
-            //加载RecycleView
-            MySlideAdapter adapter = new MySlideAdapter(this, mData);
-            binding.mainRvSlide.setAdapter(adapter);
-            binding.mainRvSlide.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-            binding.mainRvSlide.addItemDecoration(new RecyclerView.ItemDecoration() {
-                @Override
-                public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-                    super.getItemOffsets(outRect, view, parent, state);
-                    outRect.top = 2;
-                    outRect.bottom = 2;
-                }
-            });
+            initObject();
         }
-
 
         //初始化floatingButton
         binding.mainFabAdd.setOnTouchListener((view, motionEvent) -> {
@@ -98,13 +167,48 @@ public class MainActivity extends AppCompatActivity {
                         binding.mainFabAdd.setScaleY(1);
                     }
                     //跳转界面，此处可添加跳转动画
-                    startActivity(new Intent(this, EditActivity.class));
+                    Intent intent = new Intent(this, EditActivity.class);
+                    intent.putExtra(Constant.EDIT_STATUS,-1);
+                    startActivity(intent);
                     break;
                 default:
             }
             return true;
         });
 
+        //toolbar title的监听点击事件
+        binding.mainLlBarTitle.setOnClickListener(v -> showDialog());
+
+        binding.mainIvBarSetting.setOnClickListener(v ->
+                startActivity(new Intent(this,SettingActivity.class)));
+
+    }
+
+    private void showDialog(){
+
+        MoreDialog dialog = new MoreDialog(this,R.style.MyDialog);
+        /*随意定义个Dialog*/
+        Window dialogWindow = dialog.getWindow();
+        /*实例化Window*/
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+        /*实例化Window操作者*/
+        lp.x = -250; // 新位置X坐标
+        lp.y = -760; // 新位置Y坐标
+        dialogWindow.setAttributes(lp);
+        dialog.show();
+
+    }
+
+
+    @Override
+    public void onStartDrag(RecyclerView.ViewHolder viewHolder) {
+        mItemTouchHelper.startDrag(viewHolder);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        event.unregister(this);
     }
 
 

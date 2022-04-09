@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_more_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/dialog_recover_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="恢复笔记"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/dialog_recover_tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不能打开该笔记，如需对笔记进行编辑操作，请先恢复该笔记。"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/dialog_recover_tv_title"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/dialog_recover_btn_cancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:background="@drawable/layout_cancel_btn_bg"
+        android:layout_below="@id/dialog_recover_tv_msg"
+        android:layout_margin="10dp"/>
+
+
+    <Button
+        android:id="@+id/dialog_recover_btn_confirm"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="恢复"
+        android:textColor="@color/white"
+        android:background="@drawable/layout_confirm_btn_bg"
+        android:layout_toRightOf="@id/dialog_recover_btn_cancel"
+        android:layout_below="@id/dialog_recover_tv_msg"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

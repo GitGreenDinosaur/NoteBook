@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="120dp"
     android:orientation="horizontal"
     android:layout_marginTop="10dp"
     android:layout_marginStart="10dp"
@@ -9,18 +9,20 @@
     android:id="@+id/item_main_ll_global"
     android:background="@drawable/layout_content_border_bg">
 
+    <!--android:background="@drawable/ripple_with_shape_mask"-->
     <RelativeLayout
         android:id="@+id/item_main_ll_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/ripple_with_shape_mask">
+        android:layout_gravity="center"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/item_main_tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="This is a title"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textAllCaps="false"
             android:textColor="@color/black"
@@ -43,34 +45,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_main_tv_content"
+            android:padding="5dp"
             android:text="It is time"
             android:textAllCaps="false"
-            android:textColor="@color/color_95969A"
-            android:padding="5dp"/>
+            android:textColor="@color/color_95969A" />
 
         <ImageView
             android:id="@+id/item_main_iv_choose"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:visibility="gone"
+            android:visibility="invisible"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/item_icon_choose_circle"/>
+
+        <ImageView
+            android:id="@+id/item_main_iv_top"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/top"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="240dp"
-        android:layout_height="110dp"
+        android:layout_height="120dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/item_main_tv_top"
+            android:id="@+id/item_main_tv_private"
             android:layout_width="120dp"
             android:layout_height="match_parent"
-            android:background="#ffa042"
+            android:background="@color/color_sky_blue"
             android:gravity="center"
-            android:text="置顶"
+            android:text="设为私密"
             android:textColor="@color/white"
             android:textSize="20sp" />
 

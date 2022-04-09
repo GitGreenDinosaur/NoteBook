@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/dialog_more_bg">
+
+    <TextView
+        android:id="@+id/dialog_private_tv_title"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="设置6位数字密码"
+        android:textColor="#38ADFF"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/dialog_private_et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="请输入密码"
+        android:inputType="numberPassword" >
+        <requestFocus/>
+    </EditText>
+
+    <View
+        android:layout_width="220dp"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#E4E4E4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_private_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#7D7D7D"
+            android:textSize="16sp"
+            android:text="取消"/>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#E4E4E4" />
+
+        <Button
+            android:id="@+id/dialog_private_btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="#38ADFF"
+            android:textSize="16sp"
+            android:text="确定" />
+
+    </LinearLayout>
+
+</LinearLayout>

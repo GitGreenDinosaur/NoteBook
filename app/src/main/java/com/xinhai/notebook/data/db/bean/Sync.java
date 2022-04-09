@@ -8,7 +8,7 @@ public class Sync {
     private int id;
     private String uuid;
     private String time;
-    private boolean status; //同步状态true false
+    private int status; //同步状态 0：未同步   1：已同步
 
     @Override
     public String toString() {
@@ -18,6 +18,14 @@ public class Sync {
                 ", time='" + time + '\'' +
                 ", status=" + status +
                 '}';
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public int getId() {
@@ -42,13 +50,5 @@ public class Sync {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
     }
 }

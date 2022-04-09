@@ -7,14 +7,77 @@
     android:background="@color/color_f7f7f7"
     tools:context=".ui.activity.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <RelativeLayout
         android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/color_f7f7f7"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:titleTextColor="@color/black"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/main_ll_bar_title"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="笔记"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/down" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_iv_bar_setting"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:layout_below="@id/main_toolbar">
+
+        <ImageView
+            android:id="@+id/main_iv_clear"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_clear_24"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/select_all"/>
+
+        <TextView
+            android:id="@+id/main_tv_select_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/main_iv_clear"
+            android:text="请选择条目"
+            android:textColor="@color/black"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/main_rl_data_tips"
@@ -28,7 +91,7 @@
             android:id="@+id/main_iv_data_null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/data_null"/>
+            android:src="@drawable/data_null" />
 
         <TextView
             android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -48,9 +49,9 @@
             android:id="@+id/edit_iv_save"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_done_24"
             android:layout_alignParentEnd="true"
-            android:visibility="invisible"/>
+            android:src="@drawable/ic_baseline_done_24"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
@@ -65,30 +66,29 @@
             android:id="@+id/edit_et_title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@null"
             android:hint="标题"
-            android:textColorHint="@color/color_B0B2BF"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+            android:imeOptions="actionNext"
             android:inputType="text"
             android:maxLines="1"
-            android:imeOptions="actionNext"
-            android:background="@null"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_B0B2BF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edit_et_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
             android:layout_below="@id/edit_et_title"
+            android:layout_marginTop="10dp"
             android:background="@null"
-            android:imeOptions="actionDone"
-            android:hint="开始书写"
-            android:textColorHint="@color/color_B0B2BF"
             android:gravity="left|top"
-            android:inputType="text"
-            android:textSize="18sp"
-            android:textColor="@color/black" />
+            android:hint="开始书写"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_B0B2BF"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 

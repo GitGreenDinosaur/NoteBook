@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_f7f7f7"
+    tools:context=".ui.activity.PrivateActivity">
+
+    <RelativeLayout
+        android:id="@+id/private_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/back_android"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="私密空间"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/grid" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/private_rl_data_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_iv_data_null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/data_null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_iv_data_null"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="可以将隐私敏感的笔记放入这里哟..."
+            android:textColor="@color/color_B0B2BF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.xinhai.notebook.ui.widget.SlideRecyclerView
+        android:id="@+id/private_rv_slide"
+        android:visibility="gone"
+        android:layout_below="@id/private_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        app:elevation="10dp"
+        app:backgroundTint="#9C27B0"
+        android:src="@drawable/ic_btn_add"
+        android:contentDescription="@string/this_a_add_content_button" />
+
+</RelativeLayout>

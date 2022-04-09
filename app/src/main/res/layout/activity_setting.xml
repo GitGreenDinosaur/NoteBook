@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    tools:context=".ui.activity.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/setting_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/setting_iv_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_android" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="设置"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!--本地数据管理-->
+    <RelativeLayout
+        android:id="@+id/setting_rl_local_data_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/setting_tool_bar"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/setting_tv_local_data_manage_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地数据管理"
+            android:textColor="@color/color_sky_blue" />
+
+        <ImageView
+            android:id="@+id/setting_iv_local_data_manage_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/setting_tv_local_data_manage_tips"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/data" />
+
+        <TextView
+            android:id="@+id/setting_tv_local_data_manage_header_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/setting_iv_local_data_manage_icon"
+            android:text="数据导出与导入"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_tv_local_data_manage_header_describe"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/setting_iv_local_data_manage_icon"
+            android:text="将本地数据导出或导入软件" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/enter" />
+
+    </RelativeLayout>
+
+    <!--列表滑动开关-->
+    <RelativeLayout
+        android:id="@+id/setting_rl_slide_switch_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_rl_local_data_manage"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/setting_tv_slide_switch_manage_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="列表滑动开关"
+            android:textColor="@color/color_sky_blue" />
+
+        <ImageView
+            android:id="@+id/setting_iv_slide_switch_manage_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/setting_tv_slide_switch_manage_tips"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/slide" />
+
+        <TextView
+            android:id="@+id/setting_tv_slide_switch_manage_header_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/setting_iv_slide_switch_manage_icon"
+            android:text="列表滑动"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_tv_slide_switch_manage_header_describe"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/setting_iv_slide_switch_manage_icon"
+            android:text="设置列表是否可滑动 (不建议开启)" />
+
+        <include
+            android:id="@+id/setting_sw_slide_switch"
+            layout="@layout/include_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp" />
+
+    </RelativeLayout>
+
+    <!--私密空间开关-->
+    <RelativeLayout
+        android:id="@+id/setting_rl_private_switch_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_rl_slide_switch_manage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/setting_tv_private_switch_manage_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="私密空间开关"
+            android:textColor="@color/color_sky_blue" />
+
+        <ImageView
+            android:id="@+id/setting_iv_private_switch_manage_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/setting_tv_private_switch_manage_tips"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/personal" />
+
+        <TextView
+            android:id="@+id/setting_tv_private_switch_manage_header_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/setting_iv_private_switch_manage_icon"
+            android:text="私密空间"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_tv_private_switch_manage_header_describe"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/setting_iv_private_switch_manage_icon"
+            android:text="开启私密空间，保护您的隐私内容" />
+
+        <include
+            android:id="@+id/setting_sw_private_switch"
+            layout="@layout/include_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp" />
+
+    </RelativeLayout>
+
+    <!--指纹识别开关-->
+    <RelativeLayout
+        android:id="@+id/setting_rl_biometric_switch_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_rl_private_switch_manage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/setting_tv_biometric_switch_manage_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="指纹识别开关"
+            android:textColor="@color/color_sky_blue" />
+
+        <ImageView
+            android:id="@+id/setting_iv_biometric_switch_manage_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/setting_tv_biometric_switch_manage_tips"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/personal" />
+
+        <TextView
+            android:id="@+id/setting_tv_biometric_manage_header_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/setting_iv_biometric_switch_manage_icon"
+            android:text="指纹识别"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_tv_biometric_manage_header_describe"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/setting_iv_biometric_switch_manage_icon"
+            android:text="使用指纹识别 (不建议开启)" />
+
+        <include
+            android:id="@+id/setting_sw_biometric_switch"
+            layout="@layout/include_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

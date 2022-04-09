@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
+
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -65,6 +66,8 @@ public class SlideRecyclerView extends RecyclerView {
         mTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
         mScroller = new Scroller(getContext());
     }
+
+
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent e) {

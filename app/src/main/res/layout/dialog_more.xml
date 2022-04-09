@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/dialog_more_bg"
+    android:gravity="center"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/dialog_more_btn_waster"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_with_shape_mask"
+        android:gravity="center"
+        android:text="废纸篓"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/dialog_more_btn_private"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_with_shape_mask"
+        android:gravity="center"
+        android:text="私密空间"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

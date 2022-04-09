@@ -1,28 +1,33 @@
 package com.xinhai.notebook.data.db.bean;
 
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
+
 /**
  * 笔记内容
  */
-public class Note {
+public class Note implements Serializable {
 
     private int id;
     private String uid;
     private String title;
     private String content;
+    private int status; //0表示无任何状态 1表示置顶 2表示废纸篓 3表示私密
     private String time;
-    private int status; //0：不是废纸   1：是废纸  2：是私密内容
 
     public Note() {}
 
-    public Note(int id, String uid, String title, String content, String time, int status) {
+    public Note(int id, String uid, String title, String content, int status, String time) {
         this.id = id;
         this.uid = uid;
         this.title = title;
         this.content = content;
-        this.time = time;
         this.status = status;
+        this.time = time;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Note{" +
@@ -30,8 +35,8 @@ public class Note {
                 ", uid='" + uid + '\'' +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
-                ", time='" + time + '\'' +
                 ", status=" + status +
+                ", time='" + time + '\'' +
                 '}';
     }
 

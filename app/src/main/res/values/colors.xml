@@ -15,5 +15,9 @@
     <color name="text_Grey">#c1c1c2</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorAccent">#F8635d</color>
+    <!--switch的颜色-->
+    <color name="theme">#FF1F7DF7</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_light">#FFE0E0E0</color>
 
 </resources>
